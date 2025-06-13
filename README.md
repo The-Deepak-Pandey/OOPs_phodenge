@@ -158,3 +158,18 @@ class ClassName {
     }
 };
 ```
+
+## Dynamic Memory Allocation -
+Dynamic memory allocation is the process of allocating memory at runtime using pointers. It allows for flexible memory management and is essential for creating objects whose size may not be known at compile time.
+- Use `new` operator to allocate memory.    
+- Use `delete` operator to deallocate memory.
+
+```cpp
+int *ptr = new int; // Allocating memory for an integer
+delete ptr; // Deallocating memory
+int *arr = new int[10]; // Allocating memory for an array of integers
+delete[] arr; // Deallocating memory for the array
+```
+
+## Inheritance -
+When properies and member functions of `base` class are passed on to the `derived` class.
