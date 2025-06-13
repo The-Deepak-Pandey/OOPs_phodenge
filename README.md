@@ -25,3 +25,12 @@ Encapsulation is `wrapping up` of data and member functions into a single unit c
 Basically humne data/properties ko member function ke sath wrap kar diya and usko class ke andar rakh diya and iss process ko encapsulation kehte hain.
 
 Help in `data hiding` through access modifiers.
+
+## Constructor -
+
+Special method invoked automatically at the time of `object creation`. Used for Initialization.
+
+- Same name as class.
+- Constructor doesn't have return type.
+- Only called once (automatically) at the time of object creation.
+- Memory allocation happens when constructor is called.
