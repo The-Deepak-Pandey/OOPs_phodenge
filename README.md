@@ -34,3 +34,14 @@ Special method invoked automatically at the time of `object creation`. Used for 
 - Constructor doesn't have return type.
 - Only called once (automatically) at the time of object creation.
 - Memory allocation happens when constructor is called.
+
+Automation means that by default if we haven't defined any constructor, then compiler will create a default constructor for us. Which looks like this -
+
+```cpp
+class ClassName {
+    public:
+    ClassName() {
+        // default constructor
+    }
+};
+```
