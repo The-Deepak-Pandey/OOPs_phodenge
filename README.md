@@ -19,3 +19,9 @@
 ## Encapsulation -
 
 Encapsulation is `wrapping up` of data and member functions into a single unit called class.
+
+(emphasysis on capsule word)
+
+Basically humne data/properties ko member function ke sath wrap kar diya and usko class ke andar rakh diya and iss process ko encapsulation kehte hain.
+
+Help in `data hiding` through access modifiers.

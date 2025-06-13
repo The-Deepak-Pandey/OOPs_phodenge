@@ -26,6 +26,32 @@ class Teacher {
         }
 };
 
+class Accound {
+    private: // data hiding
+        double balance;
+        string password;
+
+    public:
+        string accountNumber;
+        string accountHolderName;
+
+        void deposit(double amount) {
+            balance += amount;
+        }
+
+        void withdraw(double amount) {
+            if (amount <= balance) {
+                balance -= amount;
+            } else {
+                cout << "Insufficient balance!" << endl;
+            }
+        }
+
+        double getBalance() { // getter method
+            return balance;
+        }
+}
+
 int main(){
     Teacher t1;
     t1.name = "Deepak";
