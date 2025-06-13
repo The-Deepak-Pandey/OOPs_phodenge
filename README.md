@@ -120,3 +120,21 @@ class ClassName {
         this->data = new int(*obj.data); // Assuming data is a pointer
     }
     ```
+
+## Destructors -
+A destructor is a special member function that is invoked automatically when an object goes out of scope or is explicitly deleted. It is used to perform cleanup operations, such as releasing resources or memory allocated by the object.
+- Same name as class but with a tilde (~) prefix.
+- Destructor defined as public.
+- Destructor doesn't have return type.
+- Only called once (automatically) at the time of object destruction.
+- Memory deallocation happens when destructor is called.
+
+```cpp
+class ClassName {
+    public:
+    // Destructor
+    ~ClassName() {
+        // cleanup code
+    }
+};
+```
