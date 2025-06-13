@@ -17,10 +17,10 @@ class Teacher {
             department = "Computer Science"; // default value
         }
 
-        Teacher(string n, string d, string s, double sal) { // parameterized constructor
+        Teacher(string n, string department, string s, double sal) { // parameterized constructor
             cout << "Parameterized constructor called!" << endl;
             name = n;
-            department = d;
+            this->department = department; // using 'this' pointer to avoid ambiguity
             subject = s;
             salary = sal;
         }

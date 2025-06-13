@@ -93,3 +93,5 @@ class ClassName {
     }
 };
 ```
+
+<b>Note:</b> Constructor overloading is an example of `polymorphism`, which will be discussed later.
