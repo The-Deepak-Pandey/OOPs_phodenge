@@ -2,16 +2,17 @@
 using namespace std;
 
 class Teacher {
-    // properties or attributes
-    string name;
-    string department;
-    string subject;
-    double salary;
+    public:
+        // properties or attributes
+        string name;
+        string department;
+        string subject;
+        double salary;
 
-    // methods or member functions
-    void changeDepartment(string newDepartment) {
-        department = newDepartment;
-    }
+        // methods or member functions
+        void changeDepartment(string newDepartment) {
+            department = newDepartment;
+        }
 };
 
 int main(){

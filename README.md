@@ -10,7 +10,7 @@
 
 ## Access Modifiers -
 
-- <b>Private :</b>  data & methods accesible inside class
+- <b>Private :</b>  data & methods accesible inside class (by default everything is private in C++)
 
 - <b>Public :</b>  data & methods accesible to everyone
 
