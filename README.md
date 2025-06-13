@@ -138,3 +138,23 @@ class ClassName {
     }
 };
 ```
+
+<b>Note:</b> If some properties are dynamically allocated, then we need to deallocate them in the destructor to avoid memory leaks.
+
+```cpp
+class ClassName {
+    private:
+    int *data; // Dynamically allocated memory
+
+    public:
+    // Constructor
+    ClassName() {
+        data = new int[10]; // Allocating memory
+    }
+
+    // Destructor
+    ~ClassName() {
+        delete[] data; // Deallocating memory
+    }
+};
+```

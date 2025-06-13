@@ -10,6 +10,7 @@ class Teacher {
         string name;
         string department;
         string subject;
+        double *cgpaPtr; // assuming cgpa is a double, though not used in this example
 
 
         Teacher(){ // non-parameterized constructor
@@ -53,6 +54,15 @@ class Teacher {
             cout << "Salary: " << salary << endl;
             cout << "------------------------" << endl;
         }
+
+        ~Teacher() { // destructor
+            cout << "Destructor called for " << name << endl;
+            // if cgpaPtr was dynamically allocated, we would delete it here
+            if (cgpaPtr != nullptr) {
+                delete cgpaPtr;
+            }
+        } // destructor ko call nhi krna hota, compiler automatically calls it when the object goes out of scope
+
 };
 
 int main() {
