@@ -70,3 +70,26 @@ Constructor are mainly of three types -
             this->b = obj.b;
     }
     ```
+
+### Constructor Overloading -
+Constructor overloading is the process of defining multiple constructors with different parameters in the same class. This allows for different ways to initialize an object.
+
+```cpp
+class ClassName {
+    public:
+    // Default constructor
+    ClassName() {
+        // initialization code
+    }
+
+    // Parameterized constructor
+    ClassName(int a, int b) {
+        // initialization code with parameters
+    }
+
+    // Copy constructor
+    ClassName(const ClassName &obj) {
+        // copy initialization code
+    }
+};
+```

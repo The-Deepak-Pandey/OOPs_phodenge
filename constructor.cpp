@@ -11,9 +11,18 @@ class Teacher {
         string department;
         string subject;
 
-        Teacher(){
-            cout << "Default constructor called!" << endl;
+
+        Teacher(){ // non-parameterized constructor
+            cout << "Non-parameterized constructor called!" << endl;
             department = "Computer Science"; // default value
+        }
+
+        Teacher(string n, string d, string s, double sal) { // parameterized constructor
+            cout << "Parameterized constructor called!" << endl;
+            name = n;
+            department = d;
+            subject = s;
+            salary = sal;
         }
 
         // methods or member functions
@@ -28,17 +37,19 @@ class Teacher {
         double getSalary() {  // getter method
             return salary;
         }
+
+        void displayInfo() {
+            cout << "Name: " << name << endl;
+            cout << "Department: " << department << endl;
+            cout << "Subject: " << subject << endl;
+            cout << "Salary: " << salary << endl;
+        }
 };
 
 int main() {
-    Teacher t1; // Default constructor is called here
-    t1.name = "Deepak";
-    t1.subject = "C++";
-    t1.department = "Computer Science";
-
-    cout << "Teacher Name: " << t1.name << endl;
-    cout << "Subject: " << t1.subject << endl;
-    cout << "Department: " << t1.department << endl;
+    
+    Teacher teacher1("John Doe", "Mathematics", "Algebra", 50000.0); // using parameterized constructor
+    teacher1.displayInfo();
 
     return 0;
 }
