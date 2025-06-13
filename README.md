@@ -31,6 +31,7 @@ Help in `data hiding` through access modifiers.
 Special method invoked automatically at the time of `object creation`. Used for Initialization.
 
 - Same name as class.
+- Constructor defined as public.
 - Constructor doesn't have return type.
 - Only called once (automatically) at the time of object creation.
 - Memory allocation happens when constructor is called.
@@ -45,3 +46,27 @@ class ClassName {
     }
 };
 ```
+
+Constructor are mainly of three types -
+1. **Default Constructor** - No parameters, initializes data members to default values.
+    ```cpp
+    ClassName() {
+        // default constructor
+    }
+    ```
+2. **Parameterized Constructor** - Takes parameters to initialize data members with specific values.
+    ```cpp
+    ClassName(int a, int b) {
+            // parameterized constructor
+            this->a = a;
+            this->b = b;
+    }
+    ```
+3. **Copy Constructor** - Initializes an object using another object of the same class.
+    ```cpp
+    ClassName(const ClassName &obj) {
+            // copy constructor
+            this->a = obj.a;
+            this->b = obj.b;
+    }
+    ```

@@ -13,6 +13,7 @@ class Teacher {
 
         Teacher(){
             cout << "Default constructor called!" << endl;
+            department = "Computer Science"; // default value
         }
 
         // methods or member functions
