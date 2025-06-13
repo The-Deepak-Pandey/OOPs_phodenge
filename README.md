@@ -15,3 +15,7 @@
 - <b>Public :</b>  data & methods accesible to everyone
 
 - <b>Protected :</b>  data & methods accesible inside & to its derived classes
+
+## Encapsulation -
+
+Encapsulation is `wrapping up` of data and member functions into a single unit called class.
