@@ -50,7 +50,7 @@ class Accound {
         double getBalance() { // getter method
             return balance;
         }
-}
+};
 
 int main(){
     Teacher t1;
