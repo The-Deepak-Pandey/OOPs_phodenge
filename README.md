@@ -62,14 +62,21 @@ Constructor are mainly of three types -
             this->b = b;
     }
     ```
-3. **Copy Constructor** - Initializes an object using another object of the same class.
+3. **Copy Constructor** - Special constructor (default) used to copy properties of one object into another.
     ```cpp
-    ClassName(const ClassName &obj) {
-            // copy constructor
-            this->a = obj.a;
-            this->b = obj.b;
+    Teacher t2(t1); // Default Copy constructor is used like this
+
+    // Copy constructor definition
+    ClassName(const ClassName &obj) { // Passed by reference
+        // copy constructor
+        this->property = obj.property; // Copying properties from obj to this object
     }
     ```
+
+### `this` Pointer -
+The `this` pointer is a special pointer that points to the current object of the class. It is used to access members of the class from within its member functions.
+
+- `this->property` is same as `*(this).property`.
 
 ### Constructor Overloading -
 Constructor overloading is the process of defining multiple constructors with different parameters in the same class. This allows for different ways to initialize an object.
@@ -95,3 +102,21 @@ class ClassName {
 ```
 
 <b>Note:</b> Constructor overloading is an example of `polymorphism`, which will be discussed later.
+
+### Type of Copies -
+
+1. **Shallow Copy** - A shallow copy of an object copies all of the member values from one object to another.
+    ```cpp
+    ClassName obj1;
+    ClassName obj2 = obj1; // Shallow copy
+    ```
+
+2. **Deep Copy** - A deep copy, on the other hand, not only Copies the member values but also makes copies of any dynamically allocated memory that the members point to.
+    ```cpp
+    ClassName obj1;
+    ClassName obj2 = obj1; // Deep copy
+    // Custom copy constructor for deep copy
+    ClassName(const ClassName &obj) {
+        this->data = new int(*obj.data); // Assuming data is a pointer
+    }
+    ```
