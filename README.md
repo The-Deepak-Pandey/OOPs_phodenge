@@ -173,3 +173,35 @@ delete[] arr; // Deallocating memory for the array
 
 ## Inheritance -
 When properies and member functions of `base` class are passed on to the `derived` class.
+
+```cpp
+class Base {
+    public:
+    void display() {
+        cout << "Base class display function" << endl;
+    }
+};
+
+class Derived : public Base {
+    public:
+    void show() {
+        cout << "Derived class show function" << endl;
+    }
+};
+```
+---
+
+<b>Note:</b> First constructor of base class is called then derived class constructor!
+
+<b>Node:</b> First destructor of derived class is called then base class destructor!
+
+---
+
+### Mode of Inheritance -
+
+| | Derived Class | Derived Class | Derived Class |
+|----------------|----------------|----------------|----------------|
+| Base Class     | Private         | Protected      | Public        |
+| Private | Not inherited | Not inherited | Not inherited |
+|Protected | Private | Protected | Protected |
+| Public | Private | Protected | Public |
