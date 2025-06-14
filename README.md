@@ -297,3 +297,35 @@ Polymorphism is the abolify of objects to take on `different forms` or behave in
         Complex c3 = c1 + c2; // Uses overloaded + operator
     }
     ```
+
+2. **Run-time Polymorphism** - Resolved during runtime. AKA Dynamic Polymorphism.
+
+    - **Function Overriding** - Parent & Child both contain same function with different implementation.The parent class funcction is said to be overridden by the child class function.
+    ```cpp
+    class Base{
+        public:
+        void display() {
+            cout << "Base class display function" << endl;
+        }
+    };
+    class Derived : public Base {
+        public:
+        void display() { // Overriding the base class function
+            cout << "Derived class display function" << endl;
+        }
+    };
+    ```
+
+    - **Virtual Functions** - A virtual function is a member function that you expect to be redefined in derived classes.
+        
+        - Virtual functions are Dynamic in nature.
+        - Defined by the keyword `virtual` inside the base class and are always declared with a base class and overriden in the child class.
+        - A virtual function is called during Runtime.
+
+## Abstraction -
+Hiding all unnecessary details and showing only the essential features of an object using access modifiers and abstract classes.
+
+### Abstract Class -
+- Abstract classes are used to provide a base class from which other classes can be derived.
+- They cannot be instantiated and are meant to be inherited.
+- Abstract classes are typically used to define an interface or a common base for derived classes.
