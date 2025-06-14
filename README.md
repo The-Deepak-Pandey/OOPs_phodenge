@@ -327,5 +327,5 @@ Hiding all unnecessary details and showing only the essential features of an obj
 
 ### Abstract Class -
 - Abstract classes are used to provide a base class from which other classes can be derived.
-- They cannot be instantiated and are meant to be inherited.
+- They cannot be instantiated (you cannot create objects directly from them) and are meant to be inherited.
 - Abstract classes are typically used to define an interface or a common base for derived classes.
