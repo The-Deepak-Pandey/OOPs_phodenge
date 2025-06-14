@@ -205,3 +205,48 @@ class Derived : public Base {
 | Private | Not inherited | Not inherited | Not inherited |
 |Protected | Private | Protected | Protected |
 | Public | Private | Protected | Public |
+
+### Types of Inheritance -
+
+1. **Single Inheritance** - A derived class inherits from a single base class.
+    ```cpp
+    class Base {};
+    class Derived : public Base {};
+    ```
+
+2. **Multiple Inheritance** - A derived class inherits from multiple base classes.
+    ```cpp
+    class Teacher {};
+    class Student {};
+    class TeachingAssistant : public Teacher, public Student {};
+    ```
+    Here TeachingAssistant will have all the properties of Teacher class and Student class. Like salary from Teacher class, roll number from Student class, etc.
+
+3. **Multilevel Inheritance** - A derived class inherits from another derived class.
+    ```cpp
+    class Grandparent {};
+    class Parent : public Grandparent {};
+    class Child : public Parent {};
+    ```
+    Here Child class will have all the properties of Parent class and Grandparent class.
+
+4. **Hierarchical Inheritance** - Multiple derived classes inherit from a single base class.
+    ```cpp
+    class Person{} // name , age
+    class Student : public Person {}; // roll number, marks
+    class Teacher : public Person {}; // salary, subject
+    ```
+    Here both Student and Teacher classes will have properties of Person class.
+
+5. **Hybrid Inheritance** - A combination of two or more types of inheritance.
+    ```cpp
+    class Base {};
+    class Derived1 : public Base {};
+    class Derived2 : public Base {};
+    class Derived3 : public Derived1, public Derived2 {};
+    ```
+
+## Polymorphism -
+
+Polymorphism is the abolify of objects to take on `different forms` or behave in different ways `depending on the context` in which they are used.
+
