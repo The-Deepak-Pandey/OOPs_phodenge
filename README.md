@@ -250,3 +250,50 @@ class Derived : public Base {
 
 Polymorphism is the abolify of objects to take on `different forms` or behave in different ways `depending on the context` in which they are used.
 
+### Types of Polymorphism -
+
+1. **Compile-time Polymorphism** - Resolved during compile time.
+    
+    - **Constructor Overloading** - Multiple constructors with different parameters in the same class.
+    ```cpp
+    class ClassName {
+        public:
+        ClassName() { /* default constructor */ }
+        ClassName(int a) { /* parameterized constructor */ }
+    };
+    ```
+
+    - **Function Overloading** - Multiple functions with the same name but different parameters or types in the same scope.
+    ```cpp
+    class Math {
+        public:
+        int add(int a, int b) { return a + b; }
+        int add(int a, int b, int c) { return a + b + c; }
+        double add(double a, double b) { return a + b; }
+    };
+    ```
+
+    - **Operator Overloading** - Defining custom behavior for operators when applied to user-defined types.
+    ```cpp
+    class Complex {
+        private:
+        double real, imag;
+
+        public:
+        Complex(double r, double i) : real(r), imag(i) {}
+
+        // Overloading the + operator
+        Complex operator+(const Complex& other) {
+            Complex res;
+            res.real = this->real + other.real;
+            res.imag = this->imag + other.imag;
+            return res;
+        }
+    };
+
+    int main() {
+        Complex c1(1.0, 2.0);
+        Complex c2(3.0, 4.0);
+        Complex c3 = c1 + c2; // Uses overloaded + operator
+    }
+    ```
