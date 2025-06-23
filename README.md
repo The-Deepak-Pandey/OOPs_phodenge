@@ -345,5 +345,4 @@ class AbstractClass {
 
 - Variables declared as static in a function are created & initialized only once for the lifetime of the program. `in Function`
 
-- Static variables in a class are created & initialized once. They are shared by all objects of the class. `in Class`
-
+- Static variables in a class are created & initialized once. They are shared by all objects of the class. `in Class` - (basically a global variable inside a class - matlab saare objects ke liye same value hogi uss static variable ki)
