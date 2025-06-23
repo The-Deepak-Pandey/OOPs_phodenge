@@ -4,18 +4,24 @@ using namespace std;
 
 class A {
     public : 
-        int x;
-        A(int x) {
-            this->x = x;
+        int deepu;
+        A(int deepu) {
+            this->deepu = deepu;
         }
 
         void increment() {
-            x++;
+            deepu++;
         }
 
         void display() {
-            cout << "Value of x: " << x << endl;
+            cout << "Value of deepu: " << deepu << endl;
         }
+};
+
+class B {
+    public :
+        int deepuB;
+        
 }
 
 void func() {
@@ -44,11 +50,11 @@ int main() {
     cout << "\nDemonstrating class A:" << endl;
 
     A obj(5);
-    obj.display(); // Display initial value of x
-    obj.increment(); // Increment x
-    obj.display(); // Display incremented value of x
-    obj.increment(); // Increment x again
-    obj.display(); // Display incremented value of x again
+    obj.display(); // Display initial value of deepu
+    obj.increment(); // Increment deepu
+    obj.display(); // Display incremented value of deepu
+    obj.increment(); // Increment deepu again
+    obj.display(); // Display incremented value of deepu again
 
 
     return 0;
