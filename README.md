@@ -331,3 +331,19 @@ Hiding all unnecessary details and showing only the essential features of an obj
 - Abstract classes are used to provide a base class from which other classes can be derived.
 - They cannot be instantiated (you cannot create objects directly from them) and are meant to be inherited.
 - Abstract classes are typically used to define an interface or a common base for derived classes.
+- An abstract class can contain pure virtual functions, which are declared by assigning `0` to the function declaration.
+```cpp
+class AbstractClass {
+    public:
+    virtual void pureVirtualFunction() = 0; // Pure virtual function
+};
+```
+
+## Static KeyWord -
+
+### Static Variables -
+
+- Variables declared as static in a function are created & initialized only once for the lifetime of the program. `in Function`
+
+- Static variables in a class are created & initialized once. They are shared by all objects of the class. `in Class`
+
