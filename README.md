@@ -346,3 +346,102 @@ class AbstractClass {
 - Variables declared as static in a function are created & initialized only once for the lifetime of the program. `in Function`
 
 - Static variables in a class are created & initialized once. They are shared by all objects of the class. `in Class` - (basically a global variable inside a class - matlab saare objects ke liye same value hogi uss static variable ki)
+
+
+Great question! **Abstraction** and **Encapsulation** are two fundamental **Object-Oriented Programming (OOP)** concepts that are closely related but **not the same**.
+
+🔍 **1\. Abstraction — Hiding** _**Implementation**_
+----------------------------------------------------
+
+### ➤ Focuses on **what** an object does, **not how** it does it.
+
+It hides **complex details** and exposes only the necessary parts to the user.
+
+### ✅ Example:
+
+You drive a car by using the **steering wheel, accelerator, brake** — you don’t need to know how the engine, gearbox, or fuel system works.
+
+### 🧪 C++ Code Example:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Abstract class
+class Animal {
+public:
+    virtual void makeSound() = 0; // Pure virtual function
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() override {
+        cout << "Woof! Woof!" << endl;
+    }
+};
+
+int main() {
+    Animal* a = new Dog();
+    a->makeSound();  // You don't care how "Woof!" is implemented
+}
+```
+
+✔️ You’re using makeSound() without knowing _how_ it does it — that's **abstraction**.
+
+🔒 **2\. Encapsulation — Hiding** _**Data**_
+--------------------------------------------
+
+### ➤ Focuses on **how** data is **protected** from outside access.
+
+It binds **data** and **methods** that operate on that data into a **single unit (class)** and restricts direct access using **access modifiers** (private, public, etc.).
+
+### ✅ Example:
+
+A class that stores your bank balance — others shouldn’t directly modify it.
+
+### 🧪 C++ Code Example:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    double balance;  // Encapsulated data
+
+public:
+    BankAccount() {
+        balance = 0;
+    }
+
+    void deposit(double amount) {
+        if (amount > 0)
+            balance += amount;
+    }
+
+    double getBalance() const {
+        return balance;
+    }
+};
+
+int main() {
+    BankAccount acc;
+    acc.deposit(1000);
+    // acc.balance = 5000;  ❌ Not allowed (private)
+    cout << "Balance: " << acc.getBalance() << endl;
+}
+```
+
+✔️ Access to balance is **controlled through methods** — that's **encapsulation**.
+
+🔁 **Difference Summary**
+-------------------------
+
+AspectAbstractionEncapsulationFocusHides **implementation complexity**Hides **internal object state**PurposeShow essential features onlyProtect data from unwanted accessAchieved byAbstract classes, InterfacesAccess modifiers (private, public)ExamplemakeSound() without knowing internalsbalance hidden in BankAccount
+
+🧠 Tip:
+-------
+
+> **Abstraction** is about **design** — what the user sees.**Encapsulation** is about **security** — what the user can access.
+
+Let me know if you want Java or Python examples too!

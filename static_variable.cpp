@@ -22,7 +22,7 @@ class B {
     public :
         int deepuB;
         
-}
+};
 
 void func() {
     int x = 0;
